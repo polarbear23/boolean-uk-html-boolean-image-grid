@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.container{
+    
+    display: grid;
+    grid-template: 
+    "head head head" 0.1fr
+    ". main ."  0.8fr
+    "foot foot foot" 00.1fr/
+    0.2fr  0.6fr 0.2fr
+    ;
+
+}
+
+
+.head{
+
+    grid-area: head;
+    display: grid;
+    background-color: #011434;
+    position: sticky;
+    top:0;
+  
+}
+
+.card{
+
+    
+    display: grid;
+    grid-template:
+    "img img img"1fr
+    "img img img"1fr
+    "bottom bottom bottom"1fr/
+    200px  1fr 1fr;
+
+    color:black;
+    border: 1px solid #011434;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.main{
+    
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-rows: repeat(auto-fit, 500px);
+
+    
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
+.foot{
+
+    grid-area: foot;
+    background-color: #011434;
+    position: sticky;
+    bottom: 0;
+
+}
+
+.top-card{
+    grid-area: img;
+   
+    height: 100%;
+    width: 100%;
+}
+
+.top-card > .laptop{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template: 
+    ". . logo"40px
+    ". . ." 1fr
+    ". . ."1fr/
+    1fr 1fr 40px;
+
+    grid-area: img;
+    background-image: url("./assets/images/boolean-laptop.jpg");
+    background-size: cover;
+
+    border-radius: 10px 10px 0 0;
+
+}
+
+
+.logo-card{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    grid-area: logo;
+}
+
+.bottom-card{
+    grid-area: bottom;
+    grid-template-rows: 50px 250px;
+
+}
+
+.bottom-card > .social-media-icons{
+    display: grid;
+    grid-template: 
+    ". . github twitter" 40px/
+    1fr 1fr 40px 40px;
+
+}
+
+.bottom-card > .social-media-icons > img {
+    height: 100%;
+    width: 100%;
+}
+
+.twitter{
+    grid-area: twitter;
+}
+
+.github{
+    grid-area: github;
+}
+
+.bottom-card > p{
+    grid-area: text;
+
+}
+
+
+
+
+
